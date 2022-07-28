@@ -1,6 +1,6 @@
 const fs = require('fs');
-const getSections = require('./testesl');
+const getSections = require('./fetchEsl');
 
-getSections('1+John+1').then((sections => {
+getSections('Matthew+6').then((sections => {
     console.log(sections);
 }));

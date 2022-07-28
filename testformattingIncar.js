@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-function parseIncarnation() {
-    const passages = fs.readFileSync('./OnTheIncarnation46-48.txt', 'utf-8');
+function parseIncarnation(filename) {
+    const passages = fs.readFileSync(filename, 'utf-8');
     const passageArr = passages.split(/[\n]/);
 
     const maxlength = '19 Therefore whoever relaxes one of the least of these commandments and teaches others to do the same will be called least in the kingdom of heaven, but whoever does them and teaches them will be called great in the kingdom of heaven. 20 For I tell you, unless your righteousness exceeds that of the scribes and Pharisees, you will never enter the kingdom of heaven.'.length;
@@ -33,7 +33,5 @@ function parseIncarnation() {
     }
     return createdSections;
 }
-
-console.log(parseIncarnation())
 
 module.exports = parseIncarnation;

@@ -1,4 +1,4 @@
-const parseResponse = require('./testformatting');
+const parseResponse = require('./formatVerses');
 const eslKey = require('./keys.json').esvapi;
 function fetchPassage(chapter)
 {
@@ -12,7 +12,7 @@ function fetchPassage(chapter)
     return fetch(url, { headers })
         .then(data => data.json())
         .then(data => {
-            parseResponse(data)
+            return parseResponse(data)
         });
 }
 

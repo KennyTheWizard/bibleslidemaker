@@ -1,0 +1,22 @@
+{
+    "presentationId": "1KU6tWQK1mnQWKHXGeUTqrWkGWDglaVaNgnln3aAWKKY",
+    "videos": [
+        "https://www.youtube.com/watch?v=HZWfmlvEsnk&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=86",
+        "https://www.youtube.com/watch?v=YjsUNx3NF0g&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=87",
+        "https://www.youtube.com/watch?v=mwoi0C3qpw8&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=88",
+        "https://www.youtube.com/watch?v=01jb_vqudQ8&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=89",
+        "https://www.youtube.com/watch?v=XZm9v3kHSvQ&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=90",
+        "https://www.youtube.com/watch?v=smdopNp97cE&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=91",
+        "https://www.youtube.com/watch?v=ttumfPn0Zfo&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=92"
+    ],
+    "passages": [
+        "Matthew+6",
+        "Romans+14"
+    ],
+    "additional": [
+        {
+            "title": "On the Incarnation",
+            "file": "./OnTheIncarnation49-52.txt"
+        }
+    ]
+}

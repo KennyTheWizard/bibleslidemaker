@@ -1,5 +1,3 @@
-const fs = require('fs');
- 
 function parsePassage(retObj) {
     const passage = retObj.passages[0];
 
@@ -22,7 +20,6 @@ function parsePassage(retObj) {
             verseNumber = '';
         }
     }
-    console.log(passageReformatted);
     let createdSections = [];
     let currLength = 0;
     let currSection = '';
@@ -43,8 +40,5 @@ function parsePassage(retObj) {
 
     return createdSections;
 }
-
-const mark = require('./testmark7.json');
-console.log(parsePassage(mark));
 
 module.exports = parsePassage;

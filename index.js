@@ -1,7 +1,7 @@
 const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
-const getSections = require('./testesl');
+const getSectionsBible = require('./fetchEsl');
 const getIncarnation = require('./testformattingIncar');
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/presentations'];
@@ -74,11 +74,173 @@ function getNewToken(oAuth2Client, callback) {
  */
 async function listSlides(auth) {
     const slides = google.slides({version: 'v1', auth});
-    const presentation = getIncarnation();
-    for (const section of presentation)
+    const inputJson = require('./inputjson/Week17.json'); // require(process.argv[2]);
+
+    const presentationId = inputJson.presentationId;
+    // for (var passage of inputJson.passages)
+    // {
+    //     await createTitleCard(slides, presentationId, passage.replace('+', ' '));
+    //     const sections = await getSectionsBible(passage);
+    //     console.log(sections);
+    //     await createBodyFromSections(slides, presentationId, sections);
+    // }
+
+    for (var additionalItems of inputJson.additional)
+    {
+        await createTitleCard(slides, presentationId, additionalItems.title);
+        const sections = await getIncarnation(additionalItems.file);
+        await createBodyFromSections(slides, presentationId, sections);
+    }
+}
+
+async function createVideos(slides, presentationId, videoUrls)
+{
+    const regexUrl = /v=(\w{11})/;
+    for (const videoUrl of videoUrls)
+    {
+
+        const videoId = regexUrl.exec(videoUrl)[1]
+        const respSlide = await slides.presentations.batchUpdate({ presentationId, requestBody: {
+            requests: [{ createSlide: { } }]
+        }});
+    
+        const addVideo = await slides.presentations.batchUpdate({ presentationId, requestBody: {
+            requests: [
+                {
+                    createVideo: {
+                        source: 'YOUTUBE',
+                        id: videoId,
+                        elementProperties: {
+                            pageObjectId: respSlide.data.replies[0].createSlide.objectId,
+                            "size": {
+                                "width": {
+                                  "magnitude": 12000,
+                                  "unit": "EMU"
+                                },
+                                "height": {
+                                  "magnitude": 9000,
+                                  "unit": "EMU"
+                                }
+                              },
+                              "transform": {
+                                "scaleX": 762,
+                                "scaleY": 571.5,
+                                "unit": "EMU"
+                              }
+                        }
+                    }
+                }
+            ]
+        }});
+    }
+}
+
+async function createTitleCard(slides, presentationId, title)
+{
+    const respSlide = await slides.presentations.batchUpdate({ presentationId, requestBody: {
+        requests: [{ createSlide: { } }]
+    }});
+    await waitTime(1000);
+    const slideId = respSlide.data.replies[0].createSlide.objectId;
+    const respShape = await slides.presentations.batchUpdate({ presentationId, requestBody: {
+        requests: [{ 
+            createShape: { 
+                elementProperties: {
+                    pageObjectId: slideId,
+                    "size": {
+                        "width": {
+                          "magnitude": 3000000,
+                          "unit": "EMU"
+                        },
+                        "height": {
+                          "magnitude": 3000000,
+                          "unit": "EMU"
+                        }
+                    },
+                    "transform": {
+                        "scaleX": 3.048,
+                        "scaleY": 1.7145,
+                        "unit": "EMU"
+                    },
+                },
+                shapeType: 'TEXT_BOX',
+            }
+        }]
+    }});
+    await waitTime(1000);
+    const shapeId = respShape.data.replies[0].createShape.objectId;
+    const respText = await slides.presentations.batchUpdate({ presentationId, requestBody: {
+        requests: [{ 
+            insertText: { objectId: shapeId, text: title }
+        }]
+    }});
+    await waitTime(1000);
+
+    const respStyle= await slides.presentations.batchUpdate({ presentationId, requestBody: {
+        requests: [{ 
+            updateShapeProperties: {
+                fields: "shapeBackgroundFill.solidFill.color",
+                objectId: shapeId,
+                shapeProperties: {
+                    shapeBackgroundFill: {
+                        solidFill: {
+                            color: {
+                                themeColor: 'DARK1'
+                            }
+                        }
+                    },
+
+                    
+                }
+            },
+        },
+        { 
+            updateShapeProperties: {
+                fields: "contentAlignment",
+                objectId: shapeId,
+                shapeProperties: {
+                    contentAlignment: "MIDDLE",
+                }
+            },
+        },
+        {
+            updateTextStyle: {
+                fields: '*',
+                objectId: shapeId,
+                style: {
+                    fontSize: {
+                        magnitude: '56',
+                        unit: 'PT'
+                    },
+                    foregroundColor: {
+                        opaqueColor: {
+                            themeColor: 'LIGHT1'
+                        }
+                    },  
+                },
+            },
+        },
+        {
+            updateParagraphStyle: {
+                fields: 'alignment',
+                objectId: shapeId,
+                style: {
+                    alignment: 'CENTER'
+                }
+            }
+        }
+    ]
+    }});
+    await waitTime(1000);
+    console.log(respStyle.data.replies)
+
+}
+
+async function createBodyFromSections(slides, presentationId, bodySections)
+{
+    for (const section of bodySections)
     {
         console.log(section);
-        const presentationId = '1wR9nkF5uOBsvvmfRZTsikUchEba3mAXAa3sYZDIN4hc';
         const respSlide = await slides.presentations.batchUpdate({ presentationId, requestBody: {
             requests: [{ createSlide: { } }]
         }});
@@ -98,12 +260,10 @@ async function listSlides(auth) {
                               "magnitude": 3000000,
                               "unit": "EMU"
                             }
-                          },
-                          "transform": {
+                        },
+                        "transform": {
                             "scaleX": 3.048,
-                            "scaleY": 1.7239,
-                            "translateX": 16200,
-                            "translateY": 8100,
+                            "scaleY": 1.7145,
                             "unit": "EMU"
                         },
                     },
@@ -116,11 +276,23 @@ async function listSlides(auth) {
         const respText = await slides.presentations.batchUpdate({ presentationId, requestBody: {
             requests: [{ 
                 insertText: { objectId: shapeId, text: section}
-            }]
-        }});
-        await waitTime(1000);
-        const respStyle= await slides.presentations.batchUpdate({ presentationId, requestBody: {
-            requests: [{ 
+            },
+            { 
+                updateShapeProperties: {
+                    fields: "shapeBackgroundFill.solidFill.color",
+                    objectId: shapeId,
+                    shapeProperties: {
+                        shapeBackgroundFill: {
+                            solidFill: {
+                                color: {
+                                    themeColor: 'DARK1'
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            { 
                 updateTextStyle: {
                     fields: '*',
                     objectId: shapeId,
@@ -136,25 +308,8 @@ async function listSlides(auth) {
                         }
                     }
                 },
-            }]
-        }});
-        await waitTime(1000);
-        const respStyleColor= await slides.presentations.batchUpdate({ presentationId, requestBody: {
-            requests: [{ 
-                updateShapeProperties: {
-                    fields: "shapeBackgroundFill.solidFill.color",
-                    objectId: shapeId,
-                    shapeProperties: {
-                        shapeBackgroundFill: {
-                            solidFill: {
-                                color: {
-                                    themeColor: 'DARK1'
-                                }
-                            }
-                        }
-                    }
-                }
-            }]
+            }
+        ]
         }});
         await waitTime(1000);
         console.log(respText.data.replies)
@@ -162,6 +317,7 @@ async function listSlides(auth) {
         
     }
 }
+
 
 async function waitTime(time)
 {
