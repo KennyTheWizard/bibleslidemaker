@@ -1,0 +1,22 @@
+{
+    "presentationId": "1YSoHLjSQh4Gbxawa8rEBA6GeBgsow9QK1lIaCrKSsek",
+    "videos": [
+        "https://www.youtube.com/watch?v=FKMPITn6swQ&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=100",
+        "https://www.youtube.com/watch?v=P2Fip9GrsDw&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=101",
+        "https://www.youtube.com/watch?v=_yerTwJd8Pw&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=102",
+        "https://www.youtube.com/watch?v=XigdGlD-rss&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=103",
+        "https://www.youtube.com/watch?v=OB7cIuJX8pY&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=104",
+        "https://www.youtube.com/watch?v=DbuJn7Ria_o&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=105"
+    ],
+    "passages": [
+        "Mark+9",
+        "Colossians+2",
+        "Colossians+3"
+    ],
+    "additional": [
+        {
+            "title": "On the Incarnation",
+            "file": "./OnTheIncarnation56-57.txt"
+        }
+    ]
+}

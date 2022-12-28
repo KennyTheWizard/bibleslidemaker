@@ -1,0 +1,19 @@
+{
+    "presentationId": "1kxkUSWMPXy19snNwmwWfj6GKd3yrvibVZGqZV7gLrdc",
+    "videos": [
+        "https://www.youtube.com/watch?v=rn_N6ixpIbw&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=122",
+        "https://www.youtube.com/watch?v=zviB2_T5Sg4&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=123",
+        "https://www.youtube.com/watch?v=L1b77KB2cqg&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=124",
+        "https://www.youtube.com/watch?v=Yy-4lDBSoH4&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=125"
+    ],
+    "passages": [
+        "John+8",
+        "Galatians+1"
+    ],
+    "additional": [
+        {
+            "title": "Life of Moses - Story of Moses",
+            "file": "./LifeOfMoses30-50.txt"
+        }
+    ]
+}

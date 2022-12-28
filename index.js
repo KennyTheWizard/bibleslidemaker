@@ -74,16 +74,18 @@ function getNewToken(oAuth2Client, callback) {
  */
 async function listSlides(auth) {
     const slides = google.slides({version: 'v1', auth});
-    const inputJson = require('./inputjson/Week17.json'); // require(process.argv[2]);
+    console.log(process.argv[2]);
+    const inputJson = require(process.argv[2]);
 
     const presentationId = inputJson.presentationId;
-    // for (var passage of inputJson.passages)
-    // {
-    //     await createTitleCard(slides, presentationId, passage.replace('+', ' '));
-    //     const sections = await getSectionsBible(passage);
-    //     console.log(sections);
-    //     await createBodyFromSections(slides, presentationId, sections);
-    // }
+    await createVideos(slides, presentationId, inputJson.videos);
+    for (var passage of inputJson.passages)
+    {
+        await createTitleCard(slides, presentationId, passage.replaceAll('+', ' '));
+        const sections = await getSectionsBible(passage);
+        console.log(sections);
+        await createBodyFromSections(slides, presentationId, sections);
+    }
 
     for (var additionalItems of inputJson.additional)
     {
@@ -95,7 +97,7 @@ async function listSlides(auth) {
 
 async function createVideos(slides, presentationId, videoUrls)
 {
-    const regexUrl = /v=(\w{11})/;
+    const regexUrl = /v=(.{11})/;
     for (const videoUrl of videoUrls)
     {
 

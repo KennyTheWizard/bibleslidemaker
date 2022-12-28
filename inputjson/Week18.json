@@ -1,0 +1,22 @@
+{
+    "presentationId": "1_KG0N8mx7RjH_SuyOV-OFBZkXcKsZwnfFspMi376x8w",
+    "videos": [
+        "https://www.youtube.com/watch?v=A-6Oki3mCl8&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=93",
+        "https://www.youtube.com/watch?v=sTO6u5JDR9w&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=94",
+        "https://www.youtube.com/watch?v=AU9JcPBWyDg&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=95",
+        "https://www.youtube.com/watch?v=Zl3w2pjvcYg&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=96",
+        "https://www.youtube.com/watch?v=ymuSVRcBLlE&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=97",
+        "https://www.youtube.com/watch?v=oHx2YGVUSEA&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=98",
+        "https://www.youtube.com/watch?v=fD9voEKv1EA&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=99"
+    ],
+    "passages": [
+        "Luke+1",
+        "Philippians+2"
+    ],
+    "additional": [
+        {
+            "title": "On the Incarnation",
+            "file": "./OnTheIncarnation53-55.txt"
+        }
+    ]
+}

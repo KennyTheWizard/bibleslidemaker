@@ -1,0 +1,21 @@
+{
+    "presentationId": "12waMF5dsMHNSe9wi9jf818rkHz8yBmMiUXbwF3piM50",
+    "videos": [
+        "https://www.youtube.com/watch?v=YdiBwksH3YM&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=133",
+        "https://www.youtube.com/watch?v=HYTTBNVJaLc&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=134",
+        "https://www.youtube.com/watch?v=vULT7QqIucQ&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=135",
+        "https://www.youtube.com/watch?v=92C4__L7HhQ&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=136",
+        "https://www.youtube.com/watch?v=EZyffqTwcAo&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=137",
+        "https://www.youtube.com/watch?v=mL5LpaJbl4g&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=138"
+    ],
+    "passages": [
+        "Luke+14",
+        "James+4"
+    ],
+    "additional": [
+        {
+            "title": "Life of Moses - Story of Moses",
+            "file": "./LifeOfMoses51-75.txt"
+        }
+    ]
+}

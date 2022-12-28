@@ -1,0 +1,22 @@
+{
+    "presentationId": "1Lftg3NOc9Cy-CX2QpMSEuSOOMRedQ1BRnAzaLBHu1Hg",
+    "videos": [
+        "https://www.youtube.com/watch?v=6hwgEQcsTvI&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=111",
+        "https://www.youtube.com/watch?v=On8Ilh1EQeE&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=112",
+        "https://www.youtube.com/watch?v=J_b0-wje3J4&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=113",
+        "https://www.youtube.com/watch?v=pfllwT2vmZ4&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=114",
+        "https://www.youtube.com/watch?v=rLLTmqCMuCY&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=115",
+        "https://www.youtube.com/watch?v=n8UVDGpqFuI&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=116",
+        "https://www.youtube.com/watch?v=2jZ_5rMtkcg&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=117"
+    ],
+    "passages": [
+        "Luke+16",
+        "1+John+2"
+    ],
+    "additional": [
+        {
+            "title": "Life of Moses - Prologue",
+            "file": "./LifeOfMoses7-15.txt"
+        }
+    ]
+}

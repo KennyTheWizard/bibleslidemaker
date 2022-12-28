@@ -1,0 +1,20 @@
+{
+    "presentationId": "1G7_icpdl1u5dkwbA0NVspcxEmc4Bgk86LRNe8_Sn3C8",
+    "videos": [
+        "https://www.youtube.com/watch?v=LyvVT0wos_g&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=106",
+        "https://www.youtube.com/watch?v=g2W7rbRKXuY&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=107",
+        "https://www.youtube.com/watch?v=P6QCxg-ny4c&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=108",
+        "https://www.youtube.com/watch?v=vMWLp9uZSSg&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=109",
+        "https://www.youtube.com/watch?v=sKzUrzqzhBc&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=110"
+    ],
+    "passages": [
+        "Matthew+16",
+        "1+Corinthians+9"
+    ],
+    "additional": [
+        {
+            "title": "Life of Moses - Prologue",
+            "file": "./LifeOfMoses1-6.txt"
+        }
+    ]
+}

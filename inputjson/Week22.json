@@ -1,0 +1,19 @@
+{
+    "presentationId": "1wiz_M5nxeSD1LFPo7Y5-6EmTUboAgKCDlUyyu80Wgms",
+    "videos": [
+        "https://www.youtube.com/watch?v=ZipXi5V_QWc&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=118",
+        "https://www.youtube.com/watch?v=_SiJHjuPt0E&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=119",
+        "https://www.youtube.com/watch?v=dH-cZ3Pneek&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=120",
+        "https://www.youtube.com/watch?v=1mou9SQJ7kQ&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=121"
+    ],
+    "passages": [
+        "John+5",
+        "James+5"
+    ],
+    "additional": [
+        {
+            "title": "Life of Moses - Story of Moses",
+            "file": "./LifeOfMoses16-29.txt"
+        }
+    ]
+}

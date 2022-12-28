@@ -1,0 +1,22 @@
+{
+    "presentationId": "1lO8J7xzCYIzPkseEzaxRNRmySmBXAESJjzL5TEI-qJI",
+    "videos": [
+        "https://www.youtube.com/watch?v=oDRxlRZ7eI0&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=126",
+        "https://www.youtube.com/watch?v=bxlbxWuyYq8&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=127",
+        "https://www.youtube.com/watch?v=8AKKNv3FQAE&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=128",
+        "https://www.youtube.com/watch?v=tkhli_W6J_8&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=129",
+        "https://www.youtube.com/watch?v=cFdXz6IeIAs&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=130",
+        "https://www.youtube.com/watch?v=c7KVRzxgRr0&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=131",
+        "https://www.youtube.com/watch?v=78hK1eUfIi4&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=132"
+    ],
+    "passages": [
+        "Luke+8",
+        "1+Timothy+3"
+    ],
+    "additional": [
+        {
+            "title": "Life of Moses - Story of Moses",
+            "file": "./LifeOfMoses51-75.txt"
+        }
+    ]
+}

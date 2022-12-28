@@ -1,0 +1,21 @@
+{
+    "presentationId": "1LhYZsy3keuMzclQRHxprQ_TRsyYEx46FnU9FOpdMwbE",
+    "videos": [
+        "https://www.youtube.com/watch?v=5BCshwav-UQ&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=139",
+        "https://www.youtube.com/watch?v=EUTdqeDO-JE&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=140",
+        "https://www.youtube.com/watch?v=SYaEhqhvOuk&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=141",
+        "https://www.youtube.com/watch?v=r5dYgw3NPaw&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=142",
+        "https://www.youtube.com/watch?v=5aRnwrAP6zE&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=143",
+        "https://www.youtube.com/watch?v=qtXE1iA6BQQ&list=PLfqlfKzf7YaAap_FN3xkuwZgRrKleFJN-&index=144"
+    ],
+    "passages": [
+        "John+13",
+        "Romans+12"
+    ],
+    "additional": [
+        {
+            "title": "Life of Moses - Story of Moses",
+            "file": "./LifeOfMoses76-18part2.txt"
+        }
+    ]
+}
