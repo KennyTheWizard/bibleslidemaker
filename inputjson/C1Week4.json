@@ -1,0 +1,22 @@
+{
+    "presentationId": "1BlaHTIqaMX-pm3ngBXCzrIihy7W-xA79INRdHnX6dT8",
+    "videos": [
+    ],
+    "psalms": [
+        "19",
+        "20",
+        "21",
+        "22:1-19",
+        "22:20-32",
+        "23"
+    ],
+    "passages": [
+        "Matthew+26",
+        "Hebrews+7",
+        "Hebrews+12"
+    ],
+    "paradiseHymn": [{
+        "title": "Hymn III",
+        "file": "./hymnsOfParadise/hymn_of_paradise3.txt"
+    }]
+}

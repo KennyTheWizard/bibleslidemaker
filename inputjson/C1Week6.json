@@ -1,0 +1,23 @@
+{
+    "presentationId": "15q6xUywMlG1_bySF4ILOSQChB7j0OqVU7BjL9k0Sevk",
+    "videos": [
+    ],
+    "psalms": [
+        "30",
+        "31:1-16",
+        "31:17-27",
+        "32",
+        "33",
+        "34"
+    ],
+    "passages": [
+        "Psalm+99:9",
+        "Matthew+13",
+        "Acts+12",
+        "Romans+11"
+    ],
+    "paradiseHymn": [{
+        "title": "Hymn V",
+        "file": "./hymnsOfParadise/hymn_of_paradise5.txt"
+    }]
+}

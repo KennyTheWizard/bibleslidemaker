@@ -1,0 +1,27 @@
+{
+  "presentationId": "11VfXUtE3sMm1RhO2i0i4jwKjPIW3p0ibL0avljmpSN4",
+  "videos": [
+    "https://www.youtube.com/watch?v=H-eSyieRRyc",
+    "https://www.youtube.com/watch?v=6UcxK1pP-TU"
+  ],
+  "mountainverse": "Isaiah+11:9",
+  "psalms": [
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43"
+  ],
+  "passages": [
+    "Luke+10",
+    "1+Corinthians+6",
+    "James+1"
+  ],
+  "paradiseHymn": [
+    {
+      "title": "Hymn VII",
+      "file": "./hymnsOfParadise/hymn_of_paradise7.txt"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ const readline = require('readline');
 const {google} = require('googleapis');
 const getSectionsBible = require('./fetchEsl');
 const getIncarnation = require('./testformattingIncar');
+const parseHymn = require('./testformattinghymn');
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/presentations'];
 // The file token.json stores the user's access and refresh tokens, and is
@@ -78,19 +79,48 @@ async function listSlides(auth) {
     const inputJson = require(process.argv[2]);
 
     const presentationId = inputJson.presentationId;
-    await createVideos(slides, presentationId, inputJson.videos);
-    for (var passage of inputJson.passages)
+
+    const mountainVerse = inputJson.mountainverse;
+    if (mountainVerse) {
+        await createTitleCard(slides, presentationId, mountainVerse.replaceAll('+', ' '));
+        const mountainSection = await getSectionsBible(mountainVerse);
+        console.log(mountainSection);
+        await createBodyFromSections(slides, presentationId, mountainSection);
+    }
+
+    let lastPsalm = '';
+    for (var psalm of inputJson.psalms ?? [])
     {
-        await createTitleCard(slides, presentationId, passage.replaceAll('+', ' '));
-        const sections = await getSectionsBible(passage);
-        console.log(sections);
+        await createTitleCard(slides, presentationId, "Psalm " + psalm);
+        let psalmBeforeColon = psalm.split(':')[0];
+        if (psalmBeforeColon != lastPsalm) {
+            const sections = await getIncarnation(`./treasuryOfDavid/psalm${psalmBeforeColon}.txt`);
+            await createBodyFromSections(slides, presentationId, sections);
+        }
+        lastPsalm = psalmBeforeColon;
+        await createTitleCard(slides, presentationId, psalm);
+
+    }
+    for (var passage of inputJson.passages ?? [])
+    {
+        const { reference, passage: sections } = await getSectionsBible(passage);
+        await createTitleCard(slides, presentationId, reference);
+        console.log(reference, sections);
         await createBodyFromSections(slides, presentationId, sections);
     }
 
-    for (var additionalItems of inputJson.additional)
+    for (var additionalItems of inputJson.additional ?? [])
     {
         await createTitleCard(slides, presentationId, additionalItems.title);
         const sections = await getIncarnation(additionalItems.file);
+        await createBodyFromSections(slides, presentationId, sections);
+    }
+    await createVideos(slides, presentationId, inputJson.videos);
+
+    for (var hymn of inputJson.paradiseHymn ?? [])
+    {
+        await createTitleCard(slides, presentationId, hymn.title);
+        const sections = await parseHymn(hymn.file);
         await createBodyFromSections(slides, presentationId, sections);
     }
 }
@@ -98,7 +128,7 @@ async function listSlides(auth) {
 async function createVideos(slides, presentationId, videoUrls)
 {
     const regexUrl = /v=(.{11})/;
-    for (const videoUrl of videoUrls)
+    for (const videoUrl of videoUrls ?? [])
     {
 
         const videoId = regexUrl.exec(videoUrl)[1]
@@ -277,7 +307,7 @@ async function createBodyFromSections(slides, presentationId, bodySections)
         const shapeId = respShape.data.replies[0].createShape.objectId;
         const respText = await slides.presentations.batchUpdate({ presentationId, requestBody: {
             requests: [{ 
-                insertText: { objectId: shapeId, text: section}
+                insertText: { objectId: shapeId, text: section.trim()}
             },
             { 
                 updateShapeProperties: {
@@ -290,7 +320,16 @@ async function createBodyFromSections(slides, presentationId, bodySections)
                                     themeColor: 'DARK1'
                                 }
                             }
-                        }
+                        },
+                    }
+                }
+            },
+            { 
+                updateShapeProperties: {
+                    fields: "contentAlignment",
+                    objectId: shapeId,
+                    shapeProperties: {
+                        contentAlignment: "MIDDLE",
                     }
                 }
             },

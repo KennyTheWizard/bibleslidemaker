@@ -1,0 +1,23 @@
+{
+    "presentationId": "1nQLO4FqCo-gQQomBeKhu33BwQE-rEY3rFie-nAz4R8k",
+    "videos": [
+    ],
+    "psalms": [
+        "15",
+        "16",
+        "17",
+        "18:1-20",
+        "18:21-35",
+        "18:36-51"
+    ],
+    "passages": [
+        "Deuteronomy+5:4",
+        "John+5",
+        "Acts+13",
+        "2+Timothy+2"
+    ],
+    "paradiseHymn": [{
+        "title": "Hymn I",
+        "file": "./hymnsOfParadise/hymn_of_paradise2.txt"
+    }]
+}

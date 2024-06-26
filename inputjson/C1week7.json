@@ -1,0 +1,26 @@
+{
+  "presentationId": "1y_6UjUW-tTGePox4zuAwJVr_DLYujoO2QaS-t0pIb90",
+  "videos": [
+    "https://www.youtube.com/watch?v=GgawHBE-3lI",
+    "https://www.youtube.com/watch?v=iXb0Gizzufs"
+  ],
+  "mountainverse": "Isaiah+2:2",
+  "psalms": [
+    "35:1-14",
+    "35:15-28",
+    "36",
+    "37:1-11",
+    "37:12-24"
+  ],
+  "passages": [
+    "Matthew+4",
+    "2+Timothy+4",
+    "Colossians+2"
+  ],
+  "paradiseHymn": [
+    {
+      "title": "Hymn VI",
+      "file": "./hymnsOfParadise/hymn_of_paradise6.txt"
+    }
+  ]
+}

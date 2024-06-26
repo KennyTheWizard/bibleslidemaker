@@ -1,0 +1,27 @@
+{
+  "presentationId": "1pUOlvETaKT7NHWqbnEezMaQrf5_I09nb45q9aSnyWyg",
+  "videos": [
+    "https://www.youtube.com/watch?v=CdesPY5ImuI",
+    "https://www.youtube.com/watch?v=H-GsyKBQi_M"
+  ],
+  "mountainverse": "Isaiah+27:13",
+  "psalms": [
+    "56",
+    "57",
+    "58",
+    "59",
+    "60",
+    "61"
+  ],
+  "passages": [
+    "Matthew+6",
+    "Hebrews+3",
+    "1+Timothy+3"
+  ],
+  "paradiseHymn": [
+    {
+      "title": "Hymn X",
+      "file": "./hymnsOfParadise/hymn_of_paradise10.txt"
+    }
+  ]
+}

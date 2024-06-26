@@ -38,7 +38,7 @@ function parsePassage(retObj) {
     createdSections.push(currSection);
     
 
-    return createdSections;
+    return { reference: retObj.canonical, passage: createdSections };
 }
 
 module.exports = parsePassage;

@@ -1,0 +1,23 @@
+{
+    "presentationId": "1ZA-hWk-PGXQTFEtOhUC05nOcuY_xPB-SDuOlwkvCjAM",
+    "videos": [
+    ],
+    "psalms": [
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29"
+    ],
+    "passages": [
+        "Psalm+78:54",
+        "Matthew+24",
+        "2+Thessalonians+3",
+        "1+Timothy+1"
+    ],
+    "paradiseHymn": [{
+        "title": "Hymn IV",
+        "file": "./hymnsOfParadise/hymn_of_paradise4.txt"
+    }]
+}

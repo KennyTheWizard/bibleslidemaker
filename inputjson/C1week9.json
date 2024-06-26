@@ -1,0 +1,28 @@
+{
+  "presentationId": "1KZXCmbQ0xfx_gy7rI6AYjDUSzdOuYmDZYxvM-5upZek",
+  "videos": [
+    "https://www.youtube.com/watch?v=zKYuOZ_AMi0",
+    "https://www.youtube.com/watch?v=cpzUNi79_iw"
+  ],
+  "mountainverse": "Isaiah+18:3",
+  "psalms": [
+    "44:1-17",
+    "44:18-26",
+    "45",
+    "46",
+    "47",
+    "48",
+    "49"
+  ],
+  "passages": [
+    "Matthew+2",
+    "Philippians+4",
+    "Philippians+3"
+  ],
+  "paradiseHymn": [
+    {
+      "title": "Hymn VIII",
+      "file": "./hymnsOfParadise/hymn_of_paradise8.txt"
+    }
+  ]
+}
